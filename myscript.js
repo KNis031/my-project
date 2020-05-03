@@ -15,7 +15,7 @@ fetch(req)
           headlnbox.setAttribute('class','headline')
                     
           const headln = document.createElement('h3')
-          headln.innerHTML = articles.title
+          headln.innerHTML = article.title
           
           document.getElementById("headlines").appendChild(headlnbox)
           headlnbox.appendChild(headln)
