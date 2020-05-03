@@ -1,5 +1,5 @@
 
-var url = 'http://newsapi.org/v2/top-headlines?' +
+var url = 'https://newsapi.org/v2/top-headlines?' +
           'country=se&' +
           'apiKey=5cd1a5286d9e453abceee179a6446b54';
 var req = new Request(url);
