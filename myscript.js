@@ -6,7 +6,7 @@ var req = new Request(url);
 fetch(req)
     .then(response => response.json() )
     .then(data => {
-          var data = JSON.parse(this.response.json() ) // kanske ska va (response) ist för this.response
+          
         
           var title1 = data.articles[0].title;
           var title2 = data.articles[1].title;
