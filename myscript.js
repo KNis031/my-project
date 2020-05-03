@@ -8,13 +8,16 @@ fetch(req)
     .then(data => {
           
         
-          var title1 = data.articles[0].title;
-          var title2 = data.articles[1].title;
-          var title3 = data.articles[2].title;
+          data.forEach(articles => {
           
-          document.getElementById("headline1").innerHTML = title1;
-          document.getElementById("headline2").innerHTML = title2;
-          document.getElementById("headline3").innerHTML = title3;
+          const headlnbox = document.createElement('div')
+          headlnbox.setAttribute('class','headline')
+                    
+          const headln = document.createElement('h3')
+          headln.innerHTML = articles.title
           
+          document.getElementById("headlines").appendChild(headlnbox)
+          headlnbox.appendChild(headln)
+          })
       
     });
