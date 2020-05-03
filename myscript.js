@@ -8,8 +8,9 @@ fetch(req)
     .then(data => {
           
         
-          data.forEach(articles => {
-          
+          var a = 0;
+          for (const article of data.articles){
+          a += 1;
           const headlnbox = document.createElement('div')
           headlnbox.setAttribute('class','headline')
                     
@@ -18,6 +19,7 @@ fetch(req)
           
           document.getElementById("headlines").appendChild(headlnbox)
           headlnbox.appendChild(headln)
+          if (a === 4) {break}
           })
       
     });
