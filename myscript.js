@@ -4,7 +4,8 @@ var url = 'https://newsapi.org/v2/top-headlines?' +
           'apiKey=5cd1a5286d9e453abceee179a6446b54';
 var req = new Request(url);
 fetch(req)
-    .then(function(response) {
+    .then(response => response.json() 
+    .then(data => {
           var data = JSON.parse(this.response.json() ) // kanske ska va (response) ist för this.response
         
           var title1 = data.articles[0].title;
@@ -16,4 +17,4 @@ fetch(req)
           document.getElementById("headline3").innerHTML = title3;
           
       
-    })
+    });
