@@ -22,3 +22,22 @@ fetch(req)
           }
       
     });
+
+//
+/*
+
+
+let request = new Request(`https://www.yr.no/place/Sweden/Stockholm/Stockholm/forecast.xml`);
+
+fetch(request).then((results) => {
+  // results returns XML. lets cast this to a string, then create
+  // a new DOM object out of it!
+  results
+    .text()
+    .then(( str ) => {
+      let responseDoc = new DOMParser().parseFromString(str, 'application/xml');
+      return responseDoc.getElementsByTagName('zpid')[0].textContent;
+    }
+  });
+
+*/
